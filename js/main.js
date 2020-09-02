@@ -298,6 +298,7 @@ function changePage(){
 }
 
 async function openIssueJPG(info, num, canvasContainer){
+  console.log('sest');  
   var div = document.createElement('div');
   var art = canvasContainer.appendChild(div);
   art.classList.add("pdf-articles");
