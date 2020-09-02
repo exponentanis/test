@@ -53,11 +53,11 @@ async function forDataIssues(data){
 }
 function createIssues(issue){
   
-  const {name} = issue;
+  const {name, number} = issue;
 
 
   const card = `
-  <section class="swiper-slide card" data-info = "${name}">
+  <section class="swiper-slide card" data-info = "${name}" data-number = "${number}">
    <div class="card-container">
         <img src="preview_img/issues/${name}-1.jpg" alt="logo" class="img-card">
         <div class="info">
@@ -143,9 +143,7 @@ function createNews(news){
   newsCards.insertAdjacentHTML('beforeend', card);
 }
 //fuck yeaaaaaaaaaaaaaaaaaaah!
-function renderPdfArticle(url){
-  
-    const canvasContainer = document.querySelector('.main');
+function renderPdfArticle(url, canvasContainer){
     console.log('strart render');
     async function renderPage(page, width){
             console.log(width);
@@ -299,13 +297,11 @@ function changePage(){
   }
 }
 
-async function openIssueJPG(info){
-  const canvasContainer = document.querySelector('.main');
-  console.log(info);
+async function openIssueJPG(info, num, canvasContainer){
   var div = document.createElement('div');
   var art = canvasContainer.appendChild(div);
   art.classList.add("pdf-articles");
-  var num = 10; 
+  num++;
   for (var i=1;i<num;i++){
     if(i<10){
       var b = "0" + i;
@@ -314,9 +310,12 @@ async function openIssueJPG(info){
       var b = i;
     }
     const page = `
-    <img src="pdfs/issues/${info}/${info}-${b}.jpg" alt=page" class="page">
+    <img src="pdfs/issues/${info}/${info}-${b}.jpg" alt="page" class="page" style=" width: 130%;">
     `;
     art.insertAdjacentHTML('beforeend', page);
+    if(i==num-1){
+      octo.classList.add('hide');
+    }
 }
 }
 
@@ -325,6 +324,7 @@ async function openRelease(){
   const target = event.target;
   const card = target.closest('.card');
   const info = card.dataset.info;
+  const number = card.dataset.number;
   hideAll();
   menu.classList.add('vertical');
   menu.classList.remove('menu');
@@ -334,8 +334,8 @@ async function openRelease(){
   clicked = null;
 
   octo.classList.remove('hide');
-  renderPdfArticle(`./pdfs/issues/${info}.pdf`);
-  //openIssueJPG(card.dataset.info);
+  //renderPdfArticle(`./pdfs/issues/${info}.pdf`, main);
+  openIssueJPG(info, number,  main);
 }
 async function openArticle(){
   const target = event.target;
