@@ -303,6 +303,7 @@ async function openIssueJPG(info, num, canvasContainer){
   art.classList.add("pdf-articles");
   num++;
   for (var i=1;i<num;i++){
+    console.log('set');  
     if(i<10){
       var b = "0" + i;
     }
