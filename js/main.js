@@ -326,6 +326,7 @@ async function openRelease(){
   const target = event.target;
   const card = target.closest('.card');
   const info = card.dataset.info;
+  console.log('got');  
   const number = card.dataset.number;
   hideAll();
   menu.classList.add('vertical');
