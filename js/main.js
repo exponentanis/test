@@ -81,11 +81,11 @@ async function forDataArticles(data){
     );
 }
 async function createArticles(article, i){
-  const {name} = article;
+  const {name, number} = article;
 
 
   const card = `
-  <section class="swiper-slide card forlist" data-info = "${name}">
+  <section class="swiper-slide card forlist" data-info = "${name}" data-number = "${number}">
     <div class="card-container forcont">
         <img src="preview_img/articles/${name}-1.jpg" alt="logo" class="img-card getimg" >
         <div class="info">
@@ -297,23 +297,30 @@ function changePage(){
   }
 }
 
-async function openIssueJPG(info, num, canvasContainer){
-  console.log('sest');  
+async function openIssueJPG(inf, num, canvasContainer, article){
+  console.log(inf);  
   var div = document.createElement('div');
   var art = canvasContainer.appendChild(div);
   art.classList.add("pdf-articles");
   num++;
   for (var i=1;i<num;i++){
-    console.log('set');  
-    if(i<10){
-      var b = "0" + i;
+
+    if(article==0){
+      if(i<10){
+        var b = "0" + i;
+      }
+      else{
+        var b = i;
+      }
     }
     else{
       var b = i;
     }
     const page = `
-    <img src="pdfs/issues/${info}/${info}-${b}.jpg" alt="page" class="page" style=" width: 130%;">
+    <img src="${inf}${b}.jpg" alt="page" class="page" style=" width: 130%;">
     `;
+
+    
     art.insertAdjacentHTML('beforeend', page);
     if(i==num-1){
       octo.classList.add('hide');
@@ -326,7 +333,6 @@ async function openRelease(){
   const target = event.target;
   const card = target.closest('.card');
   const info = card.dataset.info;
-  console.log('got');  
   const number = card.dataset.number;
   hideAll();
   menu.classList.add('vertical');
@@ -338,12 +344,14 @@ async function openRelease(){
 
   octo.classList.remove('hide');
   //renderPdfArticle(`./pdfs/issues/${info}.pdf`, main);
-  openIssueJPG(info, number,  main);
+  openIssueJPG(`pdfs/issues/${info}/${info}-`, number,  main, 0);
 }
 async function openArticle(){
   const target = event.target;
   const card = target.closest('.card');
   const info = card.dataset.info;
+  const number = card.dataset.number;
+  console.log(info);  
   hideAll();
   menu.classList.add('vertical');
   menu.classList.remove('menu');
@@ -354,7 +362,9 @@ async function openArticle(){
 
  octo.classList.remove('hide');
 
- renderPdfArticle(`./pdfs/articles/${info}.pdf`);
+ //renderPdfArticle(`./pdfs/articles/${info}.pdf`);
+ 
+ openIssueJPG(`pdfs/articles/${info}/${info}-`, number,  main, 1);
 }
 function loadData(name){
   
