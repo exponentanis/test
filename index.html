@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper@5.4.5/css/swiper.min.css">
 
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+       <!-- Global site tag (gtag.js) - Google Analytics --> 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176276883-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -23,19 +22,8 @@
     gtag('config', 'UA-176276883-1');
     </script>
 
-    <script 
-    if(navigator.userAgent.includes("Instagram")){
-        window.location.href = "https://exponentanis.github.io/test/DummyBytes";
-    }
-    ></script>
-
 </head>
-
-<body>
-
-<!-- new comment here-->
-    
-
+<body>        
     <div class="container">
         <div class="header space-bottom">
             <a href="index.html">
@@ -43,35 +31,35 @@
             </a>
             <h3 class="text-center">Exponenta</h3>
         </div>
-    </div>
+    </div>        
+        <div class="container">
+            <div class="top ">   
+                     
+            <div class="mainb ">
+                        <div class="menub menu-center" >
+                                <button class="button button-main locked-button longbut" >
+                                    <span class="button-text">Главная</span>
+                                </button>
+                                <button class="button button-about longbut"id="ba">
+                                    <span class="button-text">О нас</span>    
+                                </button>
+                                <button class="button button-podcasts longbut"id="bp">
+                                    <span class="button-text">Подкасты</span>
+                                </button>
+                                <button class="button button-archive longbut"id="br">
+                                    <span class="button-text">Архив статей</span>
+                                </button>
+                                <button class="button button-howto longbut"id="bh">
+                                    <span class="button-text">Как оформлять статьи</span>
+                                </button>
 
-
-    <div class="container">
-
-        <div class="main space-bottom">
-            
-            <div class="top space-bottom">
-                <div class="menu menu-center">
-                    <button class="button button-main locked-button">
-                        <span class="button-text">Главная</span>
-                    </button>
-                    <button class="button button-about">
-                        <span class="button-text">О нас</span>
-                    </button>
-                    <button class="button button-archive">
-                        <span class="button-text">Архив статей</span>
-                    </button>
-                    <button class="button button-howto">
-                        <span class="button-text">Как оформлять статьи</span>
-                    </button>
-                    <a href="mailto:exponenta.magazine@gmail.com?subject=Публикация статьи (укажите название статьи)
-                    &body= Уважаемая редакция журнала “Exponenta”,
-                    %0A Прошу рассмотреть к публикации статью (укажите название статьи) (укажите имена авторов статьи)." class="button button-offer">
-                        <span class="button-text">Предложить статью</span>
-                    </a>
-                    
-                </div>
-                <div class="news  news-swiper ">
+                                <button  class="button button-offer longbut">
+                                    <span class="button-text">Предложить статью</span>
+                                </button>
+                            </div>
+                </div>     
+               
+                <div class="news space-bottom news-swiper ">
                         <div class="swiper-wrapper">
                         </div>
                 </div>
@@ -160,14 +148,38 @@
                     <br/>&emsp;<sup>1</sup>Нет необходимости вставлять цитаты в текст. (прим. ред.)
                     <br/>&emsp;<sup>2</sup>Если получится ;) (прим. ред.)
                 </div>
+                <div class="about-text me space-bottom hide" style="margin-bottom: 300px" >
+                    <span> 
+                        Я – Васильев Сергей Яковлевич, ученик Назарбаевской Интеллектуальной Школы физико-математического 
+                        направления города Алматы. Обучаясь в выпускном классе, я начал подготавливаться к поступлению в университет, 
+                        и узнал о существовании конкурсов и соревнований, на которых я надеюсь узнать мнение других людей о моей работе,
+                         а также сравнить её с работами других участников. С седьмого класса я увлекаюсь программированием, и создаю 
+                         различные проекты. В этом процессе я нахожу интересным разработку логики работы программ. Один из моих проектов, 
+                         это данный сайт, который я создал и оформил для помощи школьному журналу. Помимо этого, сайта я создаю различные
+                          проекты, программируя на Python Java и С#, однако в конкурсах участвую впервые. 
+                    <p> 
+                        (данный сайт является копией действующего сайта, так как оригинал постоянно изменяется и дополняется)
+                    </p>
+                    </span>   
             </div>
-            <div class="scroll space-bottom releases">
-                <div class="middle-text text-space">Последние выпуски:</div>
-                <div class="swiper-container sw1">
-                        <div class="swiper-wrapper">
-                        </div>
+            </div>
+        </div>   
+      
+            <div class="scroll podca podcamul hide" id="podcamul" style="margin-bottom: 50px; ">
+                <div>
+                    <iframe frameborder="0" style="margin-bottom: 50px;" width="100%" height="1200px" 
+                        src="https://music.yandex.ru/iframe/#album/12865741"> 
+            	    </iframe>
                 </div>
             </div>
+    <div class="container">
+
+        <div class="main ">
+
+            <label class="search">
+                <input type="text" class="input input-search" placeholder="Найти статью"/>
+            </label>
+
             <div class="scroll space-bottom articles">
                 <div class="middle-text text-space">Интересные статьи:</div>
                 <div class="swiper-container sw2">
@@ -175,17 +187,39 @@
                         </div>
                 </div>
             </div>
+            
+            <div class="scroll space-bottom releases">
+                <div class="middle-text text-space">Последние выпуски:</div>
+                <div class="swiper-container sw1">
+                        <div class="swiper-wrapper">
+                        </div>
+                </div>
+            </div>
+            
             <div class="article-list hide">
             </div>
 
             <img src="img/octo.gif" alt="octo" class="octo hide">
 
+            <div class="cacti hide space-bottom" >
+                <div class=" about-text cacti-text text-space" style="margin-left: 15%;margin-right: 15%; margin-bottom: 15px;"><h2>Статей по вашему запросу не найдено.</h2></div>
+                <img src="img/cacti.gif" alt="cacti" class="cactimage" >
+            </div>
+            
+
             <a href="index.html" class="button return-button  hide" style="margin-top: 10px;">
                 <span class="button-text">Вернуться на главную</span>
             </a>
         </div>
+    </div>  
+
+    <div class="scroll podca" id="podca" style="margin-bottom: 50px; ">
+        <div class="middle-text text-space" style="margin-bottom: 50px;" >Последний подкаст:</div>
+
+        <iframe frameborder="0" style="margin-bottom: 50px;" width="100%" height="100%" 
+                src="https://music.yandex.ru/iframe/#album/12865741"> 
+        </iframe>
     </div>
-    
     <div class=" footer">
             <div class="foo">
                 <a href="index.html">
@@ -215,6 +249,9 @@
                 </div>
             </div>
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.4.456/build/pdf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.943/build/pdf.min.js"></script>
     <script src="https://unpkg.com/swiper@5.4.5/js/swiper.min.js"></script>
 	<script src="js/main.js"></script>

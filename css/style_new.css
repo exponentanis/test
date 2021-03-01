@@ -1,8 +1,8 @@
 
 body {
-    font-family: "Roboto",sans-serif;
-    padding-top: 22px;
-    background: linear-gradient(180deg, rgba(37, 47, 55, 0.97) 0%, rgba(39, 46, 52, 0.830135) 83.85%) no-repeat;
+    font-family: "Sans-serif";
+    background: linear-gradient(180deg, #252F38 25%, #252F38 50%) no-repeat;
+
 }
 .input {
     background-color: #ffffff;
@@ -52,14 +52,20 @@ body {
 
 }
 .header {
+    width:100%;
+    padding-bottom:15px;
+    background-color: #252F38;
     margin: auto;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    width: 90%;
+    justify-content: space-between;    
+    top:0;
+    position: fixed;
+    z-index: 999;
 }
 .logo{
     padding-top: 30px;
+    margin-left: 100px;
     width: 99px; 
     height: 96px;
 }
@@ -68,12 +74,12 @@ body {
     margin-left: auto; 
     margin-right: auto; 
     padding-right: 55px;
-    font-family: Roboto;
+    font-family: Sans-serif;
     font-style: normal;
-    font-weight: bold;
     font-size: 75px;
     line-height: 1px;
     color: #FF0038;
+    
 }
 .mainb{
     margin: 0px;
@@ -96,7 +102,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width: 104%;
+    width: 100%;
 }
 .tophowto{
         width: 100%;
@@ -116,51 +122,50 @@ body {
     min-width: 220px;
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
 }
-.menu-center{
-    margin: auto;   
-    margin-top: 0px; 
+.menu-center{ 
+    margin-top: 50px; 
 }
 
 
 .button{
     display: flex;
     cursor: pointer;
-    outline: none;
-    background: #FF0038;
-    border: 3px solid #7C213C;
-    margin-bottom: 16px;
     margin-right: 5px;
     border-radius: 10px;
     padding: 5px 5px;
+    
     text-decoration: blink;
     
 }
-.longbut{
-    width: 177px;
-}
+
 .locked-button{
     cursor: default;
-    background: #7C213C;
-    border: 2px solid #FF0038;
 }
 .button-text{
-    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 17px;
+    line-height: 37px;
+    font-family: Sans-serif;
+    font-size: 20px;
     color: #FFFFFF;
+
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 20px;
+    line-height: 1.4em;
+    font-family: raleway, sans-serif;
+
 }
 
 .news{
-    margin-right: 25px;
     overflow: hidden;
-    border-radius: 50px;
-    height: 285px;
-    background: #565661;
+    height: 450px;
+    background: #1C232A;
     background-size: 100% 100%;
     
 }
@@ -360,7 +365,7 @@ body {
     padding-top: 0px;
 }
 .link{
-    margin-bottom: 15px;
+    margin-top: 5px;
     margin-right: 30px;
     display: flex;
     align-items: center;
