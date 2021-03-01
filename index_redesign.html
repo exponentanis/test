@@ -29,7 +29,7 @@
 <body>        
         <div class="header space-bottom">
             <a href="index.html">
-                <img src="img/logos.png" alt=logo" class="logo">
+                <img src="img/logo.png" alt=logo" class="logo">
             </a>
                 <div class="menub menu-center" >
                         <div class="button button-main locked-button longbut" >
@@ -38,18 +38,18 @@
                         <div class="button button-about longbut"id="ba">
                             <span class="button-text">О нас</span>    
                         </div>
+                        <div class="button button-archive longbut"id="br">
+                            <span class="button-text">Cтатьи</span>
+                        </div>                        
                         <div class="button button-podcasts longbut"id="bp">
                             <span class="button-text">Подкасты</span>
-                        </div>
-                        <div class="button button-archive longbut"id="br">
-                            <span class="button-text">Архив статей</span>
-                        </div>
-                        <div class="button button-howto longbut"id="bh">
-                            <span class="button-text">Как оформлять статьи</span>
                         </div>
                     
                     <a href="https://www.instagram.com/exponenta.magazine" target="_blank" class="link">
                         <img src="img/Instagram.webp" alt="insta" class="imlink">
+                    </a>
+                    <a href="https://t.me/exponenta_magazine" target="_blank" class="link" style="margin-right:70px;">
+                        <img src="img/teleg.png" alt="terrorgram" class="imlink">
                     </a>
                     </div>
         </div>
@@ -72,14 +72,6 @@
         <div class="container">
             
             <div class="top ">   
-                     
-                
-
-
-
-
-
-
             <div class="about-text about space-bottom hide" >
                 <div style="display: inline-block; font-weight: bold">Exponenta</div>
                 <span> – казахстанский научно-популярный портал, созданный энтузиастами в 2018 году. 
@@ -181,8 +173,58 @@
         </div>
         </div>
     </div>   
+
+
+    <div class="container">
+
+        <div class="main ">
+
+            <label class="search">
+                <input type="text" class="input input-search" style="margin-left:80px;" placeholder="Найти статью"/>
+            </label>
+
+            <div class="scroll space-bottom articles">
+                <div class="middle-text text-space"style="margin-right: 5%; ">Статьи</div>
+                <div class="swiper-container sw2">
+                        <div class="swiper-wrapper"> 
+                        </div>
+                </div>
+            </div>
+
+            <div class="scroll podca red" id="podca" style="margin-bottom: 5%; ">
+                <div class="middle-text text-space" ">Подкасты</div>
+        
+                <iframe frameborder="0" style="margin-bottom: 50px;" width="100%" height="100%" 
+                        src="https://music.yandex.ru/iframe/#album/12865741"> 
+                </iframe>
+            </div>
+
+            <div class="scroll space-bottom releases">
+                <div class="middle-text text-space" style="margin-right: 5%;">Журнал</div>
+                <div class="swiper-container sw1">
+                        <div class="swiper-wrapper">
+                        </div>
+                </div>
+            </div>
+            
+            <div class="article-list hide">
+            </div>
+
+            <img src="img/octo.gif" alt="octo" class="octo hide">
+
+            <div class="cacti hide space-bottom" >
+                <div class=" about-text cacti-text text-space" style="margin-left: 15%;margin-right: 15%; margin-bottom: 15px;"><h2>Статей по вашему запросу не найдено.</h2></div>
+                <img src="img/cacti.gif" alt="cacti" class="cactimage" >
+            </div>
+            
+
+            <a href="index.html" class="button return-button  hide" style="margin-top: 10px;">
+                <span class="button-text">Вернуться на главную</span>
+            </a>
+        </div>
+    </div>  
   
-        <div class="scroll podca podcamul " id="podcamul" style="margin-bottom: 50px; ">
+        <div class="scroll podca podcamul hide" id="podcamul" style="margin-bottom: 50px; ">
             <div>
                 <iframe frameborder="0" style="margin-bottom: 50px;" width="100%" height="1200px" 
                     src="https://music.yandex.ru/iframe/#album/12865741"> 
@@ -191,15 +233,12 @@
         </div>
 
 
-        <div class=" footer">
+        <div class=" footer red">
             <div class="foo">
                 <a href="index.html">
                     <img src="img/logos.png" alt=logo" class="logo logodown">
                 </a>
-                
-                <div  class="button button-offer longbut">
-                    <span class="button-text">Предложить статью</span>
-                </div>
+
 
                 <div class="contact">
                     <div class="button-text fotext" style="cursor: default;">Задать вопрос или предложить статью:</div>
@@ -208,17 +247,15 @@
                     %0A Прошу рассмотреть к публикации статью (укажите название статьи) (укажите имена авторов статьи)." class="link">
                         <div class="button-text fotext">exponenta.magazine@gmail.com</div></a>
                 </div>
-                <div class="links">
-                    <a href="https://www.instagram.com/exponenta.magazine" target="_blank" class="link">
-                        <img src="img/Instagram.webp" alt="insta" class="imlink">
-                        <div class="button-text fotext">https://www.instagram.com/exponenta.magazine</div>
-                    </a>
+                <div class="row" style="margin-right:50px;">
+                    <div class="button button-howto longbut"id="bh">
+                        <span class="button-text">Как оформлять статьи</span>
+                    </div>
+                    <div  class="button button-offer longbut">
+                        <span class="button-text">Предложить статью</span>
+                    </div>
+                </div>                
 
-                    <a href="https://t.me/exponenta_magazine" target="_blank" class="link">
-                        <img src="img/tel.png" alt="terrorgram" class="imlink">
-                        <div class="button-text fotext">https://t.me/exponenta_magazine</div>
-                    </a>
-                </div>
             </div>
     </div>
 
